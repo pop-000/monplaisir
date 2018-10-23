@@ -1,0 +1,26 @@
+.plate{
+	position:relative;
+	display:inline-block;
+	width:120px;
+	height:120px;
+	margin:0 10px 10px 0;
+	text-align:center;
+	vertical-align:top;
+	padding:15px;
+	cursor:pointer;
+}
+.plate:hover{
+	background: WhiteSmoke;
+}
+.plate img{
+	height:100px;
+}
+.plate a{
+	width: 120px;
+	height: 120px;
+	color:black;
+	text-decoration:none;
+}
+.name{
+	font-size:0.9em;
+}

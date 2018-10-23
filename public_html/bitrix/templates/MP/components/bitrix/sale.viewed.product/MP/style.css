@@ -1,0 +1,14 @@
+div.view-item {
+	width:130px;
+	display:inline-block;
+	vertical-align:top;
+	text-align: center;
+	font-size:0.8em;
+}
+div.view-item  a:link,
+div.view-item  a:visited,
+div.view-item  a:hover,
+div.view-item  a:active{
+	text-decoration:none;
+	color:black;
+}

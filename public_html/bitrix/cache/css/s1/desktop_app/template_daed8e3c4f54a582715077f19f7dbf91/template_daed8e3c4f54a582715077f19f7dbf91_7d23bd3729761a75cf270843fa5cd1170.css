@@ -1,0 +1,13 @@
+
+/* Start:/bitrix/wizards/bitrix/eshop/css/panel.css*/
+div.bx-top-panel table.bx-pnbutton div.icon-wizard {background-image:url('/bitrix/wizards/bitrix/eshop/css/wizard.gif')}
+
+td.popupmenu div.popupitem .wizard {background-image:url('/bitrix/wizards/bitrix/eshop/css/wizard.gif');}
+td.popupmenu div.popupitem .wizard-clear {background-image:url('/bitrix/wizards/bitrix/eshop/css/wizard_clear.gif');}
+/* End */
+
+/* Start:/bitrix/templates/desktop_app/template_styles.css*/
+html {-webkit-text-size-adjust:none; min-height:100%;}
+body {padding: 0; margin:0; font-family:"Helvetica Neue", Helvetica, sans-serif; min-height:100%;}
+a {font-size:12px; color:#1d54a2; text-decoration:underline;}
+/* End */

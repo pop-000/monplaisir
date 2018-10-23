@@ -1,0 +1,128 @@
+<div class="el">
+	<div class="show_everytime">
+		<a href="<?=$EL["DETAIL_PAGE_URL"]?>">
+			<div class="el_photo">
+				<img src="<?=$EL["PREVIEW_PICTURE"]["SRC"]?>" 
+					width="<?=$EL["PREVIEW_PICTURE"]["WIDTH"]?>px" 
+					height="<?=$EL["PREVIEW_PICTURE"]["HEIGHT"]?>px" 
+					title="<?=$EL["PREVIEW_PICTURE"]["TITLE"]?>" 
+					alt="<?=$EL["PREVIEW_PICTURE"]["ALT"]?>" />
+					
+				<?php if( count( $EL["MORE_PHOTO"] ) ):
+							foreach( $EL["MORE_PHOTO"] as $photo ):?> 
+				<img src="<?=$photo["SRC"]?>" 
+					width="<?=$photo["WIDTH"]?>px" 
+					height="<?=$photo["HEIGHT"]?>px" 
+					title="<?=$EL["PREVIEW_PICTURE"]["TITLE"]?>" 
+					alt="<?=$EL["PREVIEW_PICTURE"]["ALT"]?>" />
+						<?php endforeach;
+					endif; ?>
+			</div>
+		</a>
+		
+		<div class="el_name"><?=$EL["NAME"];?></div>
+		
+		<?if($EL["GABARIT"]):?>
+		<div class="el_gabarit">
+			<?
+			if($EL["GABARIT"]["DIAMETR"])
+			{
+				echo "&Oslash; &mdash; " . $EL["GABARIT"]["DIAMETR"] . ", высота: " . $EL["GABARIT"]["HEIGHT"];
+			}
+			else
+			{
+				if( $EL["GABARIT"]["WIDTH"] && $EL["GABARIT"]["HEIGHT"] )
+				{
+					echo $EL["GABARIT"]["WIDTH"] . "&times;" . $EL["GABARIT"]["HEIGHT"];
+				}
+				if( $EL["GABARIT"]["DEPTH"] )
+				{
+					echo "&times;" . $EL["GABARIT"]["DEPTH"];
+				}
+			}
+			?>
+		</div>
+		<?endif;?>
+		
+		<?if($EL["PRICE"]):?>
+		<div class="el_prices">
+			<?if($EL["PRICE"]["DISCOUNT_PRICE"] != $EL["PRICE"]["PRICE"]):?>
+				<div class="el_price">
+					<span class="el_old_price">
+						<svg width="60" height="20" style="position:absolute; top:5px; left:-5px">
+							<line x1="60" y1="0" x2="0" y2="15" style="stroke:rgb(255,0,0);stroke-width:1" />
+						</svg>
+						<?=number_format ( $EL["PRICE"]["PRICE"] , 0 , "." , " " )?>&nbsp;
+					</span>
+					<span><?=number_format ( $EL["PRICE"]["DISCOUNT_PRICE"] , 0 , "." , " " )?>
+						<span class="small"> руб.</span>
+					</span>
+					<div class="discount" title="Скидка"><?=$EL["PRICE"]["DISCOUNT"]?>%</div>
+				</div>
+			<?else:?>
+				<div class="el_price"><?=number_format ( $EL["PRICE"]["PRICE"] , 0 , "." , " " )?><span class="small"> руб.</span></div>
+			<?endif;?>
+		</div>	
+		<?endif;?>
+		
+		<div class="button_basket">
+				
+				<?if( $EL["IN_BASKET"] ):?>
+					<a href="/personal/cart/" class="already">Уже в корзине</a>
+				<?else:?>
+					<a href="<?=$EL["DETAIL_PAGE_URL"]?>" class="buy">Купить</a>
+				<?endif;?>
+				
+		</div>
+		
+		<?foreach( $EL["MARKERS"] as $prop_code => $prop_name )
+		{
+			if( $prop_code !== $arResult["PROP_SEL"] )
+			{
+				switch( $prop_code )
+				{
+					case "SPECIALOFFER":?>
+					<div class="specialoffer" title="<?=$prop_name;?>"></div>
+						<?break;
+					case "NEWPRODUCT":?>
+					<div class="newproduct" title="<?=$prop_name;?>">Новинка</div>
+						<?break;
+					case "SALELEADER":?>
+					<div class="saleleader" title="<?=$prop_name;?>"></div>
+						<?break;
+				}
+			}
+		}
+		?>
+		
+	</div>
+	
+	<div class="show_hover">
+	<?php
+	$propFields = array(
+		array( "en" => "MATHERIALS", "ru" => "Материалы" ),
+		array( "en" => "COLORS", "ru" => "Цвета" )
+	);
+	foreach( $propFields as $prop )
+	{
+		$set = $EL["SETS"][ $prop["en"] ];
+		if( count( $set ) )
+		{
+	?>
+		<div class="<?php echo strtolower( $prop["en"] ); ?>">
+			<h4><?=$prop["ru"];?></h4>
+			<?php foreach( $set["ELEMENTS"] as $el ): ?>
+			<img src="<?php echo $el["SRC"]; ?>" 
+				alt="<?php echo $el["NAME"]; ?>"
+				title="<?php echo $el["NAME"]; ?>">
+			<?php endforeach; ?>
+			<?if( $set["COUNT"] && $set["COUNT"] > $arResult["COLORS_COUNT"]):?>
+			<span class="total_cnt">всего <?=$set["COUNT"];?></span>
+			<?endif;?>
+		</div>	
+		<?php 
+		}
+	}
+	?>
+	</div>
+</div>

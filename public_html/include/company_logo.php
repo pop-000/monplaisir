@@ -1,0 +1,1 @@
+<img src="/bitrix/templates/MP/images/Monplaisir_logo_main.svg" border="0" />

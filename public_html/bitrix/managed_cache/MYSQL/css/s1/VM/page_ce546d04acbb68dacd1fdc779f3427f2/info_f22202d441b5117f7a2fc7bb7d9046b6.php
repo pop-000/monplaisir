@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/components/VM/catalog/templates/.default/style.css" => "1397039297697","/bitrix/components/VM/catalog/templates/.default/bitrix/catalog.section.list/.default/style.css" => "13970393137305",), 'CUR_SEL_CNT' => '85', 'CUR_IE_CNT' => '0'); ?>

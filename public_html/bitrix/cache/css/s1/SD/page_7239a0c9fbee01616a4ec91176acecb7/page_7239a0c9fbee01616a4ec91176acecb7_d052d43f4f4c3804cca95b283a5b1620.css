@@ -1,0 +1,381 @@
+
+
+
+/* Start:/bitrix/components/SD/catalog/templates/.default/style.css*/
+.grid{}
+.grid .bx_content_section{
+	margin-bottom: 15px;
+}
+.grid .bx_sidebar{
+	margin-bottom: 15px;
+}
+
+/* grid2x1 */
+.grid2x1{}
+.grid2x1 .bx_content_section{
+	float: left;
+	width: 66%;
+	margin-bottom: 15px;
+}
+.grid2x1 .bx_sidebar{
+	float: right;
+	width: 33%;
+	margin-bottom: 15px;
+	padding-left: 5%;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+@media (max-width:960px){
+	.grid2x1 .bx_sidebar{
+		padding-left: 4%;
+	}
+}
+@media (max-width:640px) {
+	.grid2x1 .bx_content_section,
+	.grid2x1 .bx_sidebar{
+		width: 100%;
+		float: none;
+	}
+	.grid2x1 .bx_sidebar{
+		padding-left: 3%;
+	}
+}
+@media (max-width:479px){
+	.grid2x1 .bx_sidebar{
+		padding-left: 1%;
+	}
+
+}
+/* End */
+
+
+
+/* Start:/bitrix/components/SD/catalog.element/templates/.default/style.css*/
+#left_container{
+	position:relative;
+	width:250px;
+	background-color:#f0f0f0;
+	padding:40px;
+	margin:-20px 40px 30px 0;
+	float:left;
+}
+
+#right_container{
+	
+}
+
+h1.name{
+	font-size:2em;
+	margin:15px 0;
+}
+
+#right_container p{
+	line-height:120%;
+}
+
+.big_photo_container{
+	width:250px;
+	height:420px;
+}
+.big_photo{
+	width:250px;
+}
+.small_photo_container{
+	width:250px;
+}
+.small_photo{
+	display:inline-block;
+	width:50px;
+	height:75px;
+	border:thin dotted LightGray;
+	text-align:center;
+}
+.small_photo_img{
+	height:75px;
+}
+.block_price{
+	position:relative;
+	margin:1em 0;
+	border:thin dotted #ABABAB;
+	padding:0.5em 1.5em;
+}
+.discount{
+	position:absolute;
+	top:10px;
+	right:-15px;
+	background:url('/bitrix/components/SD/catalog.element/templates/.default/images/cicle_red.png') no-repeat top left;
+	width:100px;
+	height:100px;
+	color:#fff;
+	font-size:1.8em;
+	text-align:center;
+	padding-top:33px;
+}
+.cur_price{
+	font-size:2em;
+	color:#e83434;
+	font-weight:bold;
+}
+.old_price{
+	font-size:1.35em;
+	color:#777;
+	text-decoration:line-through;
+	margin-top:0.5em;
+}
+#tbl_offers th{
+	font-size:0.8em;
+	color:#999;
+	border-bottom: thin dotted #999;
+	text-align:left;
+	padding-right:1.5em;
+}
+#tbl_offers td{
+	text-align:left;
+	border-bottom: thin dotted #999;
+	padding:0.5em 0;
+}
+.offer_size{
+	font-size:1.3em;
+}
+.offer_color{
+	font-size:0.9em;
+	margin:0.5em 0;
+}
+.offer_color_plate{
+	width: 20px;
+	height:20px;
+	vertical-align: middle;
+}
+.off_quantity{
+	color:#999;
+}
+.newproduct{
+	padding:5px 8px;
+	background-color:#7dff00;
+	color:black;
+	font-size:12px;
+	position:absolute;
+	top:30px;
+	right:0;
+}
+.specialoffer{
+position:absolute;
+	top:400px;
+	left:0;
+	padding:10px;
+	background-color:#CC3300;
+	color:#fff;
+}
+.saleleader{
+	padding:5px 8px;
+	background-color:#a2d6ff;
+	color:black;
+	font-size:12px;
+	position:absolute;
+	top:200px;
+	left:0;
+}
+.already{
+	position:absolute;
+	top:280px;
+	right:0;
+	padding:10px;
+	background-color:#1A661A;
+	color:#fff;
+}
+.absence{
+	background:	#E0E0EB;
+	padding:0.5em 1.5em;
+}
+.butt_add,
+.butt_already,
+.butt_subscr{
+	margin-top:1em;
+	height:25px;
+	border:thin solid #666;
+	font-size:1.4em;
+	padding:15px 40px;
+	text-align:center;
+}
+.butt_add{
+	background-color:#7A0000;
+}
+.butt_add:hover{
+	background-color:#EB9999;
+}
+.butt_already{
+	background-color:#006B00;
+}
+.butt_already:hover{
+	background-color:#4DB84D;
+}
+.butt_subscr{
+	background-color:#6B006B;
+}
+.butt_subscr:hover{
+	background-color:#CC80CC;
+}
+a div.butt_add,
+a div.butt_already,
+a div.butt_subscr{
+	color:#fff;
+}
+/*-------- pop up -------- */
+#popup-box {
+    position:fixed;
+    border-radius: 15px;
+    background: #fff;
+    display: none;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    z-index: 105;
+    font-size: 14px;
+	border:5px solid #8b000b;
+	padding:20px 40px;
+	width:500px;
+	top:200px;
+}
+#popup-box .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+	width:25px;
+	height:25px;
+    background-image:url('/bitrix/components/SD/catalog.element/templates/.default/images/cross.png');
+	background-repeat:no-repeat;
+	background-position:top left;
+    cursor: pointer;
+}
+#popup-box .close:hover {
+    background-position:bottom left;
+}
+#popup-box h2 {
+    font-size: 1.8em;
+	color:#8b000b;
+	text-align:center;
+}
+#popup_tbl{
+	width: 400px;
+	margin:10px auto;
+}
+#popup_tbl th{
+	text-align:left;
+	border-bottom: thin solid #e5e5e5;
+	padding-right:2em;
+}
+#popup_tbl td{
+	text-align:left;
+	border-bottom: thin solid #e5e5e5;
+	padding:0.5em 0;
+	font-size:1.1em;
+}
+#popup_tbl .el_color{
+	width: 20px;
+	height:20px;
+	border: thin solid #999;
+	overflow:hidden;
+	display:inline-block;
+}
+#popup-box .bottom {
+    background: #eee;
+    border-top: 1px solid #e5e5e5;
+    padding: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+#popup-box .button{
+	position:relative;
+    padding: 0.3em 1em;
+	font-size:1em;
+	text-align:center;
+	width:180px;
+	margin:1em auto;
+	border:thin solid #e5e5e5;
+	cursor:pointer;
+}
+#popup-box .button:hover{
+     background: #e5e5e5;
+}
+#blackout {
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: -10px;
+	left:-10px;
+	width:115%;
+	height:115%;
+    overflow-Y: scroll;
+    z-index: 100;
+    display: none;
+}
+.prop_plate{
+	width:75px;
+	height:75px;
+}
+.prop_active{
+	border:thin solid red;
+}
+/* End */
+
+
+
+/* Start:/bitrix/components/bitrix/catalog.store.amount/templates/.default/style.css*/
+div.catalog-detail { position: static; border: 1px solid; zoom:1;}
+div.catalog-detail-hover div.catalog-admin-links  { display: block; }
+div.catalog-detail-hover { position: relative;}
+
+div.catalog-detail-line
+{
+    font-size:1px;
+    height:1px;
+    line-height:1px;
+    margin:12px 0;
+    overflow:hidden;
+    padding:0;
+    background: url('/bitrix/components/bitrix/catalog.store.amount/templates/.default/images/title-line.gif') no-repeat;
+}
+div.catalog-detail-properties { clear: both; padding: 1em 0 0;  overflow: hidden; width: 80%; }
+div.catalog-detail-property { margin: 0 0 1em; border-bottom:1px dotted; float: left; width: 100%;}
+div.catalog-detail-property b { float: right; position: relative; padding-left: 3px;  font-weight:normal; }
+div.catalog-detail-property grey { color:grey;  font-weight:lighter; }
+div.catalog-detail-property span { float: left; position: relative; padding-right: 3px; zoom: 1;}
+div.catalog-detail-properties-title { font-size: 1em; font-weight: bold; margin: 2em 0 1em; }
+
+
+.bx_storege {}
+.bx_storege h4{
+    margin-bottom: 0;
+}
+.bx_storege hr{
+    background: #e5e5e5;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left, #e5e5e5 0%, #e5e5e5 50%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#e5e5e5), color-stop(50%,#e5e5e5), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(left, #e5e5e5 0%,#e5e5e5 50%,#ffffff 100%);
+    background: -o-linear-gradient(left, #e5e5e5 0%,#e5e5e5 50%,#ffffff 100%);
+    background: -ms-linear-gradient(left, #e5e5e5 0%,#e5e5e5 50%,#ffffff 100%);
+    background: linear-gradient(to right, #e5e5e5 0%,#e5e5e5 50%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=1 );
+    border: none;
+    height: 1px;
+}
+.bx_storege ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.bx_storege ul li{
+    padding: 5px 0 20px;
+    font-size: 12px;
+    line-height: 17px;
+}
+.bx_storege ul li a{
+    text-decoration: none;
+    color: #2a65ae;
+}
+.bx_storege ul li a:hover{
+    text-decoration: underline;
+}
+/* End */
+/* /bitrix/components/SD/catalog/templates/.default/style.css */
+/* /bitrix/components/SD/catalog.element/templates/.default/style.css */
+/* /bitrix/components/bitrix/catalog.store.amount/templates/.default/style.css */

@@ -1,0 +1,60 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Каталог", 
+		"catalog/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О нас", 
+		"about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Доставка и оплата", 
+		"about/delivery/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Шоу-рум", 
+		"showroom/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Гарантия и возврат", 
+		"about/guaranty/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"about/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Мой кабинет", 
+		"personal/", 
+		Array(), 
+		Array(), 
+		"CUser::IsAuthorized()" 
+	),
+	Array(
+		"Админ", 
+		"admserv/", 
+		Array(), 
+		Array(), 
+		"CSite::InGroup(array(1,7))" 
+	)
+);
+?>

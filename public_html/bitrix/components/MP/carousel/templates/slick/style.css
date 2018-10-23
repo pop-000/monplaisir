@@ -1,0 +1,33 @@
+@charset 'UTF-8';
+@import url('slick-theme.css');
+section.carousel{}
+.carousel-single{
+	background: WhiteSmoke;
+	z-index: 20;
+	height:300px;
+	overflow:hidden;
+}
+.carousel-item{
+	height:300px;
+}
+.carousel-item img{
+	margin:0 auto;;
+}
+.carousel-item a{
+	display:block;
+	width:100%;
+	height:100%;
+	text-decoration:none;	
+}
+.carousel-item-text{
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	color:white;
+	font-size:2em;
+	line-height:3em;
+	text-align:center;
+	vertical-align:bottom;
+	text-shadow: 3px 3px 6px #000000;
+}

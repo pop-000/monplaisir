@@ -1,0 +1,1 @@
+<nav class="breadcrumbs"><?=$arResult;?></nav>

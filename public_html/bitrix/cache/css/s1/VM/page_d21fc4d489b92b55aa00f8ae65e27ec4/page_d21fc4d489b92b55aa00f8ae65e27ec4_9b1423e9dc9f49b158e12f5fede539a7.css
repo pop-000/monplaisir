@@ -1,0 +1,83 @@
+
+
+
+/* Start:/bitrix/components/bitrix/catalog.store/templates/.default/style.css*/
+/*Table*/
+table.sale_personal_profile_list
+{
+	border: 0px double #000000; 
+	width: 80%;
+	background-color:#F9FAFB;
+	/*border-collapse:collapse;*/
+	font-size:12px;
+}
+
+/*Table head*/
+table.sale_personal_profile_list th
+{
+	
+	text-align: center;
+	color:#25639A;
+}
+
+/* Table cells and heads*/
+table.sale_personal_profile_list th, table.sale_personal_profile_list td
+{
+	border: 0px double #000000;
+	padding: 3px 5px;
+	vertical-align:top;
+	padding-bottom: 7px;
+}
+
+div.catalog-detail-properties { clear: both; padding: 1em 0 0;  overflow: hidden; width: 80%; }
+div.catalog-detail-property { margin: 0 0 1em;  float: left; width: 100%;}
+div.catalog-detail-property span { float: left; position: relative; top: 0.31em; padding-right: 3px; zoom: 1;}
+div.catalog-detail-properties-title { font-size: 1em; font-weight: bold; margin: 2em 0 1em; }
+
+.last
+{
+	text-align: right;
+}
+
+.central
+{
+	text-align: right;
+}
+/* End */
+
+
+
+/* Start:/bitrix/components/bitrix/catalog.store.detail/templates/.default/style.css*/
+
+
+div.catalog-detail-properties { clear: both; padding: 1em 0 0;  overflow: hidden; width: 80%; }
+div.catalog-detail-property { margin: 0 0 1em;  float: left; width: 100%;}
+div.catalog-detail-property span { float: left; position: relative; top: 0.31em; padding-right: 3px; zoom: 1;}
+div.catalog-detail-properties-title { font-size: 1em; font-weight: bold; margin: 2em 0 1em; }
+div.catalog-detail-image img {  background-image: url('/bitrix/components/bitrix/catalog.store.detail/templates/.default/images/noimage.jpg'); background-origin: content-box; }
+
+/* End */
+
+
+
+/* Start:/bitrix/components/bitrix/map.yandex.system/templates/.default/style.css*/
+div.bx-yandex-map {color: black; font-size: 11px;}
+div.bx-yandex-map div.YMaps-b-balloon-content {color: black; font-size: 11px;}
+div.bx-popup-form div.bx-yandex-map div.YMaps-b-balloon-point div.YMaps-b-balloon div.YMaps-b-balloon-wrap table.YMaps-b-balloon-frame td {
+	padding: 0px !important;
+}
+
+
+div.bx-popup-form div.bx-yandex-map div.YMaps-b-balloon-point div.YMaps-b-balloon div.YMaps-b-balloon-wrap table.YMaps-b-balloon-frame td textarea{
+	font-size: 11px;
+}
+
+
+div.bx-popup-form div.bx-yandex-map div.YMaps-b-balloon-point div.YMaps-b-balloon div.YMaps-b-balloon-wrap table.YMaps-b-balloon-frame td.YMaps-b-balloon-b {
+	background-image: none !important;
+}
+
+/* End */
+/* /bitrix/components/bitrix/catalog.store/templates/.default/style.css */
+/* /bitrix/components/bitrix/catalog.store.detail/templates/.default/style.css */
+/* /bitrix/components/bitrix/map.yandex.system/templates/.default/style.css */

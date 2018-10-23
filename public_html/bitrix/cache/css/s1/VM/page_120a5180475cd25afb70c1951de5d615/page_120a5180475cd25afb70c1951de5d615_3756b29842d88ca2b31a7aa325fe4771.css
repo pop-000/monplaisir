@@ -1,0 +1,19 @@
+
+
+
+/* Start:/bitrix/components/bitrix/subscribe.edit/templates/.default/style.css*/
+div.subscribe-edit .red {
+	color:red;
+}
+div.subscribe-edit .green {
+	color:green;
+}
+div.subscribe-edit .errorcolor {
+	color:red;
+}
+div.subscribe-edit .successcolor {
+	color:green;
+}
+	
+/* End */
+/* /bitrix/components/bitrix/subscribe.edit/templates/.default/style.css */

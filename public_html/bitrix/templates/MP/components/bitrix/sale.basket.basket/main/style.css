@@ -1,0 +1,86 @@
+table#basket_list { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+#basket_list td{
+	border-bottom: thin dotted gray;
+	padding-right:0.8em;
+}
+#basket_list td:last-of-type{
+	border-bottom: thin dotted gray;
+	padding-right:0;
+	text-align:right;
+}
+.del_item{
+	color:red;
+	cursor:pointer;
+}
+#sum_basket{
+	font-size:2em;
+}
+#order{
+	font-size:1.1em;
+	background: green;
+	padding:10px 20px;
+	border:none;
+	text-decoration:none;
+	color: white;
+	cursor:pointer;
+}
+.cart_sub_sum,
+.cart_disc{
+	font-size:1.3em;
+}
+.cart_disc{
+	color:red;
+}
+.td-quant{
+	text-align:center;
+}
+.td-price, .td-sum{
+	min-width:80px;
+	text-align:center;
+}
+
+.td-del{
+	text-align:right;
+	margin-right:0;
+	padding-right:0;
+}
+
+table#basket_list th,
+.td-math,
+.td-color{
+	text-align:center;
+}
+
+@media screen and (max-width:767px){
+	table#basket_list, 
+	table#basket_list thead, 
+	table#basket_list tbody, 
+	table#basket_list th, 
+	table#basket_list td, 
+	table#basket_list tr { 
+		display: block; 
+		border:none;
+	}
+	table#basket_list thead{
+		display:none;
+	}
+	table#basket_list tr{
+		display:flex;
+		flex-wrap:wrap;
+		align-items:center;
+		border-bottom:thin solid grey;
+		padding-bottom:15px;
+	}
+	table#basket_list .td-img{ width:15%; }
+	table#basket_list .td-name{ width:60%; }
+	table#basket_list .td-quant{ width:10%; }
+	table#basket_list .td-quant::after{ content:' шт.' }
+	table#basket_list .td-math{ padding-left:15% }
+	table#basket_list .td-color{}
+	table#basket_list .td-price{}
+	table#basket_list .td-sum{}
+	table#basket_list .td-del{}
+}

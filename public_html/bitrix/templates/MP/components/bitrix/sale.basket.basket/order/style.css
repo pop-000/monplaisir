@@ -1,0 +1,20 @@
+#basket_list td{
+	border-bottom: thin dotted gray;
+	padding-right:3em;
+}
+.del_item{
+	color:red;
+	cursor:pointer;
+}
+#sum_basket{
+	font-size:2em;
+}
+#order{
+	font-size:1.1em;
+	background: green;
+	padding:10px 20px;
+	border:none;
+	text-decoration:none;
+	color: white;
+	cursor:pointer;
+}

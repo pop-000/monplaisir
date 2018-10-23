@@ -1,0 +1,50 @@
+#basket_mini_pict{
+	display:block;
+	width:45px;
+	height:48px;
+/*	border-bottom:2px solid #675C52;*/
+	background: url(images/basket.svg) no-repeat;
+	background-size: 48px 31px;
+	background-position:0 16px;
+	text-decoration:none;
+	margin:0 auto;
+}
+#basket_mini_count{
+	display:inline-block;
+	height:26px;
+	min-width:30px;
+	font-size:18px;
+	color:white;
+	background-color: DarkOliveGreen;
+	text-align:center;
+	margin:0 0 20px 3px;
+	transform: rotate(-7deg);
+}
+#basket_mini_sum{
+	color:#8b6239;
+	font-size:16px;
+	white-space:nowrap;
+	text-align:center;
+}
+#basket_mini_sum .sum_old{
+	position:relative;
+	width:50px;
+	margin:0 auto;
+	font-size:15px;
+	color:LightSlateGrey;
+}
+@media screen and (max-width:425px)
+{
+	#basket_mini_pict{
+		width:80px;
+		height:80px;
+		background-size: 55px 35px;
+		background-position:center;
+	}
+	#basket_mini_count{
+		margin:7px 0 0 18px;
+	}
+	#basket_mini_sum{
+		display:none;
+	}
+}

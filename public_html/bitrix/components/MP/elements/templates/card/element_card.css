@@ -1,0 +1,116 @@
+/*------------- element card --------- */
+.el{
+	position:relative;
+	width:298px;
+	margin:0;
+	text-align:center;
+	cursor:pointer;	
+	border:thin solid WhiteSmoke;
+}
+.show_hover{
+	opacity:0;
+	width: 258px;
+	position:absolute;
+	top:0;
+	left:0;
+	padding:20px;
+	padding-top: 385px;
+	border:thin solid SandyBrown;
+	box-shadow: 0 2px 5px Silver;
+	z-index:1;
+	transition: opacity 0.2s;
+}
+.show_everytime{
+	padding:20px;
+}
+.show_hover h4{
+	font-size:0.8em;
+	font-weight: 700;
+	margin:0.5em 0;
+}
+.el:hover .show_hover{
+	opacity:1;
+	background:white;
+}
+.el:hover .show_everytime{
+	position:relative;
+	z-index:2;
+}
+.matherials img,
+.colors img{
+	width:20px;
+	height:20px;
+	border:thin solid gray;
+	display:inline-block;
+}
+.el_photo{
+	width:258px;
+	height:240px;
+	overflow:hidden;
+}
+.el_photo img{
+	max-width:260px;
+	max-height:240px;
+}
+.el_name{
+	font-size:16px;
+	line-height:1.1;
+	margin-top:8px;
+}
+.el_prices{
+	display:block;
+	margin:0.7em 0;
+}
+.el_price{
+	font-size:22px;
+}
+.small{
+	font-size:18px;
+}
+.el_old_price{
+	position:relative;
+	font-size:20px;
+	color:Gray;
+}
+.el_gabarit{
+	font-size:0.8em;
+}
+.button_basket a{
+	padding:4px 10px 5px;
+	width:150px;
+	margin:5px auto;
+	text-decoration:none;
+	color:white;
+}
+.already{
+	color: Olive;
+	background-color: OliveDrab;
+}
+.buy{
+	color: OliveDrab;
+	background-color: Olive;
+}
+.subscr{}
+.artnumber{}
+.total_cnt{
+	font-size:0.85em;
+}
+/*
+@media screen and (max-width:767px){
+	.el{
+		width:240px;
+		margin-bottom:10px;
+	}
+	.show_everytime,
+	.show_hover{
+		width:228px;
+	}
+	.el_photo{
+		width:240px;
+		height:240px;
+	}
+	.el_photo img{
+		max-width:240px;
+	}
+}
+*/

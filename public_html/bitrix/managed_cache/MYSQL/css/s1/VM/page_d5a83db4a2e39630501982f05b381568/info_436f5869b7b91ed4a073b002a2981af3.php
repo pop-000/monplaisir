@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/VM/components/bitrix/system.auth.changepasswd/.default/style.css" => "13961050885302",), 'CUR_SEL_CNT' => '15', 'CUR_IE_CNT' => '0'); ?>
