@@ -1,1 +1,0 @@
-<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/eshop_app/script.js" => "14733199931271","/bitrix/js/fileman/sticker.js" => "147332003476622",), 'CUR_SEL_CNT' => '0', 'CUR_IE_CNT' => '0'); ?>

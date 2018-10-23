@@ -1,1 +1,0 @@
-<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/.default/ajax/ajax.css" => "1396105086449",), 'CUR_SEL_CNT' => '3', 'CUR_IE_CNT' => '0'); ?>

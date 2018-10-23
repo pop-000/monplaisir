@@ -1,0 +1,133 @@
+#main_menu{
+	margin:0;
+	padding:10px 0;
+	list-style:none;
+}
+#main_menu a,
+#main_menu a:visited,
+#main_menu a:hover,
+#main_menu a:active{
+	text-decoration:none;
+	color:SaddleBrown;
+}
+#main_menu a:hover{
+	color:black;
+}
+#main_menu .root{
+	padding: 3px 10px;
+	display:flex;
+	align-items: center;
+}
+#main_menu a.root_item{
+	line-height:45px;
+}
+#main_menu span.icon{
+	display:block;
+	height:45px;
+	width: 45px;
+	margin-right:15px;
+	background-size: contain;
+	float:left;
+}
+#main_menu .root.current{
+	background:#fcf1e9;
+} 
+#main_menu .root_name{
+	white-space: nowrap;
+}
+#main_menu ul.childs li{
+	line-height:25px;
+}
+#main_menu .search .icon{
+	width:35px !important;
+	height:35px !important;
+	margin-left:5px;
+	background: url("images/search.svg") no-repeat center;
+}
+#main_menu .search .root_name{
+	margin:8px 0 0 5px;
+}
+@media screen and (max-width:425px){
+	#main_menu_container{
+		display:none;
+	}
+	#main_menu{
+		border-top:thin solid Gainsboro;
+		margin-top:10px;
+	}
+	#main_menu .root{
+		align-items: flex-start;
+		border-bottom:thin solid Gainsboro;
+	}
+}
+@media screen and (min-width:426px){
+	#main_menu_container{
+		position: absolute;
+		top:0;
+		left:0;
+		width:70px;
+		border:thin solid Brown;
+		border-left:none;
+		border-top:none;
+		background:white;
+		z-index:22;
+		box-shadow:0 0 5px #999;		
+	}
+	#main_menu .root_name{
+		width:150px;
+	}
+	#main_menu .dropdown::after{
+		content:'\f054';
+		font: normal normal normal 14px/45px FontAwesome;
+		font-size: inherit;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		transform: translate(0, 0);
+		float:right;
+		color:SaddleBrown;
+	}
+	#main_menu .root_name,
+	#main_menu .dropdown::after{
+		display:none;
+	}	
+	#main_menu_container:hover{
+		width:auto;
+	}	
+	#main_menu_container:hover .root_name,
+	#main_menu_container:hover .dropdown::after{
+		display:inline-block;
+	}
+	#main_menu .dropdown{
+		position:relative;
+	}
+	#main_menu .dropdown:hover .childs{
+		display:block;
+	}
+	#main_menu li:hover{
+		background:WhiteSmoke;
+	}
+	#main_menu .dropdown .childs{
+		display:none;
+		position:absolute;
+		top:0;
+		left:240px;
+		padding:10px 20px 10px 40px;
+		background:white;
+		border:thin solid SaddleBrown;
+		border-left:thin solid white;
+		white-space:nowrap;
+	}
+}
+@media screen and (min-width:1024px){
+	
+}
+@media screen and (min-width:1650px){
+	#main_menu_container{
+		width:auto;
+	}
+	#main_menu_container .root_name,
+	#main_menu_container .dropdown::after{
+		display:inline-block;
+	}
+}

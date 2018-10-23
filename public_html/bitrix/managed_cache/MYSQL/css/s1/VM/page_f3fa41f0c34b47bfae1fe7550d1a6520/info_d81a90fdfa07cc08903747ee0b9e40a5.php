@@ -1,1 +1,0 @@
-<? $arFilesInfo = array( 'FILES' => array("/bitrix/components/bitrix/statistic.table/templates/.default/style.css" => "13961050621104",), 'CUR_SEL_CNT' => '11', 'CUR_IE_CNT' => '0'); ?>

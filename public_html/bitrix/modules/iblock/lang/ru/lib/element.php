@@ -1,4 +1,0 @@
-<?
-$MESS["IBLOCK_ELEMENT_ENTITY_ID_FIELD"] = "Номер";
-$MESS["IBLOCK_ELEMENT_ENTITY_NAME_FIELD"] = "Наименование";
-?>

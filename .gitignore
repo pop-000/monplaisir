@@ -1,6 +1,7 @@
-logs/*
+logs/
 htdocs/www/upload/*
 htdocs/www/bitirix/*
-htdocs/www/bitirix/components/!MP/
-htdocs/www/bitirix/templates/!MP/
-
+!/htdocs/www/bitirix/components/MP/
+!/htdocs/www/bitirix/templates/MP/
+access.log
+error.log

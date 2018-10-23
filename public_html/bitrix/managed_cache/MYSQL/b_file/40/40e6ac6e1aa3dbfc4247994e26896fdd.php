@@ -1,7 +1,0 @@
-<?
-if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001529422183';
-$dateexpire = '001529425783';
-$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:3:{i:4051;a:13:{s:2:"ID";s:4:"4051";s:11:"TIMESTAMP_X";s:19:"07.08.2017 16:48:09";s:9:"MODULE_ID";s:6:"iblock";s:6:"HEIGHT";s:3:"478";s:5:"WIDTH";s:3:"312";s:9:"FILE_SIZE";s:5:"22766";s:12:"CONTENT_TYPE";s:10:"image/jpeg";s:6:"SUBDIR";s:10:"iblock/63a";s:9:"FILE_NAME";s:36:"63ade0fa783af028e82a4141866d082d.jpg";s:13:"ORIGINAL_NAME";s:27:"лилия 1 схема.jpg";s:11:"DESCRIPTION";s:0:"";s:10:"HANDLER_ID";N;s:4:"~src";b:0;}i:4054;a:13:{s:2:"ID";s:4:"4054";s:11:"TIMESTAMP_X";s:19:"07.08.2017 16:50:00";s:9:"MODULE_ID";s:6:"iblock";s:6:"HEIGHT";s:3:"478";s:5:"WIDTH";s:3:"312";s:9:"FILE_SIZE";s:5:"22766";s:12:"CONTENT_TYPE";s:10:"image/jpeg";s:6:"SUBDIR";s:10:"iblock/523";s:9:"FILE_NAME";s:36:"523486266faed0166b901022d7c33b2d.jpg";s:13:"ORIGINAL_NAME";s:27:"лилия 1 схема.jpg";s:11:"DESCRIPTION";s:0:"";s:10:"HANDLER_ID";N;s:4:"~src";b:0;}i:4057;a:13:{s:2:"ID";s:4:"4057";s:11:"TIMESTAMP_X";s:19:"07.08.2017 17:54:04";s:9:"MODULE_ID";s:6:"iblock";s:6:"HEIGHT";s:4:"1080";s:5:"WIDTH";s:3:"810";s:9:"FILE_SIZE";s:5:"57343";s:12:"CONTENT_TYPE";s:10:"image/jpeg";s:6:"SUBDIR";s:10:"iblock/49b";s:9:"FILE_NAME";s:36:"49bd746e919fe2187c12025913b94c10.jpg";s:13:"ORIGINAL_NAME";s:15:"_k9P8ojxJZk.jpg";s:11:"DESCRIPTION";s:0:"";s:10:"HANDLER_ID";N;s:4:"~src";b:0;}}}';
-return true;
-?>

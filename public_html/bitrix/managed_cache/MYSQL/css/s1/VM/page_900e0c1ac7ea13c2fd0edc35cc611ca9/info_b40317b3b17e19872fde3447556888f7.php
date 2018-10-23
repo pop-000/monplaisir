@@ -1,1 +1,0 @@
-<? $arFilesInfo = array( 'FILES' => array("/bitrix/components/VM/sale.basket.basket/templates/.default/style.css" => "139703917030203",), 'CUR_SEL_CNT' => '180', 'CUR_IE_CNT' => '0'); ?>
