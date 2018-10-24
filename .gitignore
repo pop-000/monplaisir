@@ -1,7 +1,11 @@
 logs/
 htdocs/www/upload/*
-htdocs/www/bitirix/*
-!/htdocs/www/bitirix/components/MP/
-!/htdocs/www/bitirix/templates/MP/
+htdocs/www/bitrix/*
+!/htdocs/www/bitrix/components/MP/
+!/htdocs/www/bitrix/templates/MP/
 access.log
 error.log
+/bitrix/.settings.php
+/bitrix/php_interface/dbconn.php
+/bootstrap/*
+htdocs/www/bootstrap/css/bootstrap.min.css
