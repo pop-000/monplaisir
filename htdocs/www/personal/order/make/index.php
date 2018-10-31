@@ -1,8 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-
-$APPLICATION->SetAdditionalCSS("style.css");
 $APPLICATION->SetTitle("Оформление заказа");
+$APPLICATION->SetAdditionalCSS("style.css");
 
 CModule::IncludeModule('sale');
 global $USER;
@@ -11,46 +10,57 @@ if(!$USER->IsAuthorized())
 {
 	if(empty($_POST["email"]))
 	{
+		?>
 		<form method="post">
-			<caption>E-mail<br/>
+			<p>Требуетcя авторизация</p>
 			<input type="email" name="email" maxlength="200" value="" placeholder="Ваш e-mail" required>
-			</caption>
 			<input type="submit" name="submit" value="Отправить">
 		</form>
+		<?
 	}
 	else
 	{
-		$arResult = $USER->SimpleRegister($_POST["email"]);
-		$USER_ID = $USER->GetID();
-		$rsUser = CUser::GetById($USER_ID);
-		CUser::SendUserInfo($id, SITE_ID, "Приветствуем Вас как нового пользователя нашего сайта!");
+		$rsUsers = CUser::GetList($by="", $order="", array('=EMAIL' => $_POST["email"]));
+		if($rsUsers->SelectedRowsCount > 0)
+		{
+			$arUser = $rsUser->Fetch();
+			$USER_ID = $arUser["ID"];
+			CUser::Authorize($USER_ID);
+		}
+		else
+		{
+			$arResult = $USER->SimpleRegister($_POST["email"]);
+		}
 	}
 }
-else
-{
-	$rsUsers = CUser::GetList($by="", $order="", array('=EMAIL' => $email));
+
+if($USER->IsAuthorized())
+{	
+	$USER_ID = $USER->GetID();
+	
+	if(empty($USER_ID))
+	{
+		$err[] = "При оформлении заказа возникла ошибка [1].";
+	}
+
+	$FUSER_ID = CSaleBasket::GetBasketUserID();
+
+	if(empty($FUSER_ID))
+	{
+		$err[] = "При оформлении заказа возникла ошибка [2].";
+	}
+
+	if(!empty($err))
+	{
+		ShowMessage(implode("<br>", $err));
+	}
+	if(isset($USER_ID, $FUSER_ID))
+	{
+
+		header("Location:confirm.php?uid=".$USER_ID."&fuid=".$FUSER_ID);
+		exit();
+	}
 }
 
-$arUser = $rsUser->Fetch();
-$USER_ID = $arUser["ID"];
-
-if(empty($USER_ID))
-{
-	$err[] = "При оформлении заказа возникла ошибка [1].";
-}
-
-$FUSER_ID = CSaleBasket::GetBasketUserID();
-
-if(empty($FUSER_ID))
-{
-	$err[] = "При оформлении заказа возникла ошибка [2].";
-}
-
-if(!empty($err))
-{
-	<p><? ShowMessage(implode("<br>", $err));?></p>
-}
-
-header("Location:make.php?uid=".$USER_ID&fuid=$FUSER_ID);
-
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

@@ -161,6 +161,7 @@ article a:hover{
 	background:Olive;
 }
 input[type="text"],
+input[type="email"],
 .bx-auth-input,
 .field-big{
 	font-size:1.2em;

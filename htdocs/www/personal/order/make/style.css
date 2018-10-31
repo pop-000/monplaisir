@@ -3,10 +3,11 @@
 }
 .order_detail th{
 	padding-bottom:0.5em;
+	border-bottom:thin dotted gray;
 }
 .order_detail td{
 	padding:0.6em 1em;
-	border-top:thin solid Grey;
+	border-top:thin dotted gray;
 }
 .resume p{
 	font-size:150%;

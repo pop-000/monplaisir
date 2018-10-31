@@ -43,6 +43,7 @@ while($arItem = $dbBasketItems->Fetch())
 		
 		$properties = $obres->getProperties();
 		$arItem["MANUFACTURER"] = $properties["MANUFACTURER"]["VALUE"];
+		$arItem["HARD"] = $properties["HARD"]["VALUE"];
 	}
 	
 // цены

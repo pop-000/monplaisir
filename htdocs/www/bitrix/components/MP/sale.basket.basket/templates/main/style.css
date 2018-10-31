@@ -43,8 +43,9 @@ table#basket_list {
 .cart_disc{
 	color:red;
 }
-.td-quant{
+.td-quant input{
 	text-align:center;
+	width:100px;
 }
 .td-price, .td-sum{
 	min-width:80px;

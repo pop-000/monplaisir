@@ -238,18 +238,20 @@ if( $this->StartResultCache( $arParams["CACHE_TIME"], array( $USER->GetGroups() 
 	
 /* =============== MATHERIALS && COLORS ============= */	
 
-	$propFields = array(
-		array( 
-			"NAME" => "MATHERIALS", 
-			"ID" => 9,
-			"RU" => "Материал"
-		),
-		array( 
+	$propFields = array();
+	
+	$propFields[] = array( 
 			"NAME" => "COLORS", 
 			"ID" => 8,
-			"RU" => "Цвет"
-		)
-	);
+			"RU" => "Цвет" );
+			
+	if(empty($arItem["HARD"]))
+	{
+		$propFields[] = array( 
+			"NAME" => "MATHERIALS", 
+			"ID" => 9,
+			"RU" => "Материал" );
+	}
 	
 	foreach( $propFields as $field )
 	{
